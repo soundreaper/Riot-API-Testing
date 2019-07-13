@@ -64,7 +64,7 @@ def main():
             summonerName = whiteSpace_fix[0] + "%20" + whiteSpace_fix[1]
 
     #My personal Riot provided developer API Key
-    APIKey = "RGAPI-9d79bed0-0e30-4a16-b126-1d63b822e52b"
+    APIKey = "RGAPI-af349bdc-9279-4742-948a-dfe812e5c642"
 
     #Calling first function to get encrypted summoner ID
     responseJSON = requestSummonerData(region, summonerName, APIKey)
@@ -91,9 +91,13 @@ def main():
     #Printing Name, Queue Type, Rank, and LP
     print()
     print("Summoner Name: " + responseJSON2[infoNum]["summonerName"])
+    print("Level: " + str(responseJSON['summonerLevel']))
     print("Queue Type: Ranked Solo/Duo")
-    print("Rank: " + responseJSON2[infoNum]["tier"] + " " + responseJSON2[infoNum]["rank"])
-    print("League Points: " + str(responseJSON2[infoNum]["leaguePoints"]))
+
+    rank = responseJSON2[infoNum]["tier"]
+    rankEdit = rank.lower().capitalize()
+    print("Rank: " + rankEdit + " " + responseJSON2[infoNum]["rank"])
+    print("League Points: " + str(responseJSON2[infoNum]["leaguePoints"]) + " LP")
     
     #Assigning Win & Loss and calculating winrate
     wins = str(responseJSON2[infoNum]["wins"])
@@ -115,7 +119,7 @@ def main():
     print()
     print("Favorite Champion: " + champName)
     print("Mastery Level: " + masteryLevel)
-    print("Mastery Points: " + masteryPoints)
+    print("Mastery Points: " + masteryPoints + "\n")
 
     '''
     #Collects list of last 20 played champions and identifies the most played
