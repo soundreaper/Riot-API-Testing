@@ -90,6 +90,7 @@ def main():
 
     #Printing Name, Queue Type, Rank, and LP
     print()
+    print("-------------------------------------")
     print("Summoner Name: " + responseJSON2[infoNum]["summonerName"])
     print("Level: " + str(responseJSON['summonerLevel']))
     print("Queue Type: Ranked Solo/Duo")
@@ -119,7 +120,8 @@ def main():
     print()
     print("Favorite Champion: " + champName)
     print("Mastery Level: " + masteryLevel)
-    print("Mastery Points: " + masteryPoints + "\n")
+    print("Mastery Points: " + masteryPoints)
+    print("-------------------------------------\n")
 
     '''
     #Collects list of last 20 played champions and identifies the most played
