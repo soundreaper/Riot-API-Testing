@@ -64,7 +64,7 @@ def main():
             summonerName = whiteSpace_fix[0] + "%20" + whiteSpace_fix[1]
 
     #My personal Riot provided developer API Key
-    APIKey = "RGAPI-af349bdc-9279-4742-948a-dfe812e5c642"
+    APIKey = "RGAPI-c155e35e-512b-460e-8a9a-64e2fe368eca"
 
     #Calling first function to get encrypted summoner ID
     responseJSON = requestSummonerData(region, summonerName, APIKey)
